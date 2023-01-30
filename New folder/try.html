@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Cara Mendapatkan Semua Text Element List Di JavaScript</title>
+</head>
+<body>
+<ul>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+</ul>
+</body>
+<script>
+	let ulAll	= document.getElementsByTagName("li");	
+ 
+	let urut	= 1;	
+	for(var i=0; i < ulAll.length; i++){
+		if(urut <= 5){
+		ulAll[i].innerText  = 'List '+urut;
+	    }else{
+		ulAll[i].innerText  = '<a href="#" style="color:red; text-decoration:none;">List '+urut+'</a>';
+		}
+		urut++;
+	}  
+</script>
+</html>

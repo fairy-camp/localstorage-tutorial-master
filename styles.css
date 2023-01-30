@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+main {
+  width: 80%;
+  margin: 15px auto 0;
+}
+
+#bmiForm input[name="name"] {
+  grid-area: name;
+}
+
+#bmiForm input[name="age"] {
+  grid-area: age;
+}
+
+#bmiForm input[name="roll"] {
+  grid-area: roll;
+}
+
+#bmiForm button {
+  grid-area: button;
+}
+
+#bmiForm {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "name name"
+    "age roll"
+    "button button";
+}
+
+#bmiForm * {
+  margin: 7px;
+  padding: 7px;
+  font-size: 1.1rem;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+#bmiForm button {
+  outline: none;
+  background-color: #6495ed;
+  color: white;
+  border: 5px solid transparent;
+  cursor: pointer;
+}
+
+#bmiForm input {
+  border: 3px solid #6495ed;
+  outline: none;
+}
+
+#bmiForm input:focus {
+  border: 3px solid #367bfa;
+}
+
+#bmiForm button:active {
+  border-color: #367bfa;
+}
+
+#bmiContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border: 2px solid gray;
+  background-color: #ebebeb;
+  color: #2f2f2f;
+  border-radius: 15px;
+}
+
+#bmiContainer div {
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+}
+
+#bmiContainer div * {
+  margin: 5px;
+}
